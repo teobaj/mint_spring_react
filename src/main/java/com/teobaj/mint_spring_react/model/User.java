@@ -44,5 +44,4 @@ public class User implements Serializable{
     @LastModifiedDate
     private Date updatedAt;
 
-
 }
