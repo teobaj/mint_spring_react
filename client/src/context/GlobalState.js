@@ -7,8 +7,8 @@ const initalState = {
     token: '',
     habits: [
         {id:1, name:"Eat an apple"},
-        {id:2, name:"run"
-    }
+        {id:2, name:"run"},
+        {id:3, name:"saluit"}
     ],
     isLoading: false,
     error: ''

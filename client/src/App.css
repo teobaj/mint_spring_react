@@ -5,7 +5,7 @@ html *{
     --mint-lightgrey: #727575;
     --mint-black: #2c2d31;
     --mint-green: #41A95E;
-    --mint-darkgrey: #3e4045;
+    --mint-darkgrey: #4f5258;
     --mint-white: #ffffff;
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -70,4 +70,35 @@ html *{
     width: 25%;
     margin: auto; 
     padding: 1rem;
+}
+
+.appbar{
+    background: rgb(65,169,94);
+    background: linear-gradient(90deg, rgba(65,169,94,1) 0%, rgba(23,46,17,1) 100%);
+}
+
+.dashboard{
+    background-image: url('./assets/dashboardbg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;  
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.habitlist{
+    width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.habit{
+    color: #2c2d31;
+    width: 100%;
+    margin: 5px;
 }
