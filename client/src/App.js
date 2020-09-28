@@ -1,28 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './App.css';
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-} from "react-router-dom";
-import LoginPage from './components/LoginPage';
-import SignupPage from './components/SignupPage';
+import AppRouter from './AppRouter';
+import { GlobalProvider, GlobalContext } from './context/GlobalState';
+
+
 
 function App() {
+
   return (
-    <Router>
-      <Switch>
-        <Route exact path="/">
-          <LoginPage />
-        </Route>
-        <Route path="/login">
-          <LoginPage />
-        </Route>
-        <Route path="/signup">
-          <SignupPage/>
-        </Route>
-      </Switch>
-    </Router >
+    <GlobalProvider>
+      <AppRouter/>
+    </GlobalProvider>
   );
 }
 
