@@ -1,13 +1,15 @@
-import { IconButton, Paper } from '@material-ui/core'
+import { Checkbox, IconButton, Paper } from '@material-ui/core';
+import { format, getDate, isToday } from 'date-fns'
 import React from 'react'
 import AddBoxIcon from '@material-ui/icons/AddBox';
-const Habit = ({name}) => {
+const Habit = ({name, lastCompleted}) => {
+
+    console.log(Date.parse(lastCompleted));
+
     return (
         <Paper className="habit">
            {name}
-           <IconButton style={{color:"#2c2d31"}}>
-               <AddBoxIcon/>
-           </IconButton>
+           <Checkbox checked={isToday(lastCompleted)} /> 
         </Paper>
     )
 }

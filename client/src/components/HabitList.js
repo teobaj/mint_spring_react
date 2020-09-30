@@ -8,7 +8,7 @@ const HabitList = () => {
 
     return (
         <div className="habitlist">
-            {habits.map(habit => <Habit name={habit.name} />)}
+            {habits.map(habit => <Habit key={habit.id} name={habit.name} lastCompleted={habit.lastCompleted} />)}
         </div>
     )
 }

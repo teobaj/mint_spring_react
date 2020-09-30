@@ -6,12 +6,12 @@ const initalState = {
     isLogged: false,
     token: '',
     habits: [
-        {id:1, name:"Eat an apple"},
-        {id:2, name:"run"},
-        {id:3, name:"saluit"}
+        {id:1, name:"Eat an apple", lastCompleted:"29/09/2020"},
+        {id:2, name:"run", lastCompleted:null},
+        {id:3, name:"saluit", lastCompleted:null}
     ],
     isLoading: false,
-    error: ''
+    error: null
 }
 
 //Create context
@@ -30,11 +30,18 @@ export const GlobalProvider = ({children}) =>{
             payload: user
         });
     }
+
+    function logout(){
+        dispatch({
+            type: 'LOGOUT'
+        })
+    }
     //
     return (<GlobalContext.Provider value={{
         habits: state.habits,
         isLogged: state.isLogged,
-        login: login
+        login: login,
+        logout,
     }}>
         {children}
     </GlobalContext.Provider>);

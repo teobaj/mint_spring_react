@@ -5,6 +5,15 @@ export default (state, action) =>{
                 ...state,
                 isLogged: true
             }
+        case 'LOGOUT':
+            return{
+                ...state,
+                isLogged: false,
+                token: '',
+                habits: [],
+                isLoading: false,
+                error: null
+            }
         default:
             return state;
     }
